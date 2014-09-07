@@ -61,7 +61,7 @@ class ApiTest(unittest.TestCase):
     def test_get_explore(self):
         tracks = self.api.get_explore()
         self.assertIsInstance(tracks, list)
-        self.assertEquals(tracks[0], 'Popular+Music')
+        self.assertEquals(tracks[0], 'Popular Music')
 
     def test_get_explore_popular_music(self):
         tracks = self.api.get_explore('1')

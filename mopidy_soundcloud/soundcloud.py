@@ -115,7 +115,7 @@ class SoundCloudClient(object):
             )
             track_ids = map(lambda x: x.get('id'), web_tracks.get('tracks'))
             return self.resolve_tracks(track_ids)
-        return explore
+        return [e.replace('+', ' ') for e in explore]
 
     def get_groups(self, query_group_id=None):
 
